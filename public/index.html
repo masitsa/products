@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Products</title>
+		<!--
+		  manifest.json provides metadata used when your web app is added to the
+		  homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+		-->
+		
+		<!-- Favicon -->
+		<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+		<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+		<script src="%PUBLIC_URL%/jquery-3.1.1.min.js"></script>
+		<!--
+		  Notice the use of %PUBLIC_URL% in the tags above.
+		  It will be replaced with the URL of the `public` folder during the build.
+		  Only files inside the `public` folder can be referenced from the HTML.
+
+		  Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+		  work correctly both with client-side routing and a non-root public URL.
+		  Learn how to configure a non-root public URL by running `npm run build`.
+		-->
+	</head>
+
+	<body>
+		<noscript>
+			You need to enable JavaScript to run this app.
+		</noscript>
+		<div class="preloader-it">
+			<div class="la-anim-1"></div>
+		</div>
+		
+		<div class="wrapper theme-1-active pimary-color-red">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="mobile-only-brand pull-left">
+					<div class="nav-header pull-left">
+						<div class="logo-wrap">
+							<a href="/">
+								<img class="brand-img" src="dist/img/logo.png" alt="Products"/>
+								<span class="brand-text">Products</span>
+							</a>
+						</div>
+					</div>	
+					<a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href=""><i class="zmdi zmdi-menu"></i></a>
+					<a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href=""><i class="zmdi zmdi-search"></i></a>
+					<a id="toggle_mobile_nav" class="mobile-only-view" href=""><i class="zmdi zmdi-more"></i></a>
+					<form id="search_form" role="search" class="top-nav-search collapse pull-left">
+						<div class="input-group">
+							<input type="text" name="example-input1-group2" class="form-control" placeholder="Search"/>
+							<span class="input-group-btn">
+								<button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true">
+									<i class="zmdi zmdi-search"></i>
+								</button>
+							</span>
+						</div>
+					</form>
+				</div>
+			</nav>
+			<div class="fixed-sidebar-left">
+				<ul class="nav navbar-nav side-nav nicescroll-bar">
+					<li>
+						<a href="/products"><div class="pull-left"><i class="fa fa-list mr-20"></i><span class="right-nav-text">Products</span></div><div class="clearfix"></div></a>
+					</li>
+					<hr class="light-grey-hr ma-0"/>
+					<li>
+						<a href="/addProduct"><div class="pull-left"><i class="fa fa-plus mr-20"></i><span class="right-nav-text">Add Product</span></div><div class="clearfix"></div></a>
+					</li>
+				</ul>
+			</div>
+			<div class="page-wrapper">
+				<div id="root"></div>
+				<div id="response_output"></div>
+				<footer class="footer container-fluid pl-30 pr-30">
+					<div class="row">
+						<div class="col-sm-12">
+							<p>2017 &copy; MCMS Interview Test</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		
+		<!--
+		  This HTML file is a template.
+		  If you open it directly in the browser, you will see an empty page.
+
+		  You can add webfonts, meta tags, or analytics to this file.
+		  The build step will place the bundled scripts into the <body> tag.
+
+		  To begin the development, run `npm start` or `yarn start`.
+		  To create a production bundle, use `npm run build` or `yarn build`.
+		-->
+	</body>
+</html>
